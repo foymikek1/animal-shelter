@@ -7,12 +7,13 @@ describe "user sees one pet", type: :feature do
       pet_1 = shelter.pets.create(adoptable: true, age: 1, breed: "Collie", name: "Zues")
       pet_2 = shelter.pets.create(adoptable: true, age: 2, breed: "Lab", name: "Horatio")
       
-      visit "/pet/#{pet_1.id}"
+      visit "/pets/#{pet_1.id}"
 
       expect(page).to have_content(pet_1.name)
       expect(page).to have_content(pet_1.adoptable)
       expect(page).to have_content(pet_1.breed)
       expect(page).to have_content(pet_1.age)
+      
     end
   end
 end
