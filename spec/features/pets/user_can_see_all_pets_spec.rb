@@ -25,7 +25,6 @@ describe "user sees all pets", type: :feature do
       expect(page).to have_link("<< View All Pets >>")
 
       click_on "<< View All Pets >>"
-      
       expect(current_path).to eq(pets_path)
     end
   end
