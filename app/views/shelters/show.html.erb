@@ -1,5 +1,5 @@
 <h1><%= @shelter.name %> currently has <%= @shelter.pets.count %> pets.</h1>
-
+<%= link_to "<< View All #{@shelter.name}'s Pets >>", pets_path(@shelter) %><br><br>
 <l1><b><%= @shelter.name %></b></l1>
 <li>Has Foster Program: <%= @shelter.foster_program %></li>
 <li>Shelter Rank: <%= @shelter.rank %></li>
