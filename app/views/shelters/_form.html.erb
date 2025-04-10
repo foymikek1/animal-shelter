@@ -1,0 +1,23 @@
+<h3>New Shelter Form</h3>
+
+<%= form_for [ @shelter ] do |f| %>
+  <p>
+    <%= f.label :foster_program %><br/>
+    <%= f.text_field :foster_program %>
+  </p>
+  <p>
+    <%= f.label :rank %><br/>
+    <%= f.text_area :rank %>
+  </p>
+  <p>
+    <%= f.label :city %><br/>
+    <%= f.text_area :city %>
+  </p>
+  <p>
+    <%= f.label :name %><br/>
+    <%= f.text_area :name %>
+  </p>
+  <p>
+    <%= f.submit 'Submit'  %>
+  </p>
+<% end %>

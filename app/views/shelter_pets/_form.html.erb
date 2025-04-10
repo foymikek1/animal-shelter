@@ -1,0 +1,21 @@
+<%= form_for [ @shelter, @pet ] do |f| %>
+  <p>
+    <%= f.label :age %><br/>
+    <%= f.text_area :age %>
+  </p>
+  <p>
+    <%= f.label :breed %><br/>
+    <%= f.text_area :breed %>
+  </p>
+  <p>
+    <%= f.label :name %><br/>
+    <%= f.text_area :name %>
+  </p>
+    <p>
+    <%= f.label :adoptable %><br/>
+    <%= f.text_area :adoptable, value: true %>
+  </p>
+  <p>
+    <%= f.submit 'Create Pet'  %>
+  </p>
+<% end %>

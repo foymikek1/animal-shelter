@@ -1,0 +1,21 @@
+<%= form_for [ @shelter ] do |f| %>
+  <p>
+    <%= f.label :foster_program %><br/>
+    <%= f.text_area :foster_program, value: @shelter.foster_program %>
+  </p>
+  <p>
+    <%= f.label :city %><br/>
+    <%= f.text_area :city, value: @shelter.city %>
+  </p>
+  <p>
+    <%= f.label :name %><br/>
+    <%= f.text_area :name, value: @shelter.name %>
+  </p>
+    <p>
+    <%= f.label :rank %><br/>
+    <%= f.text_area :rank, value: @shelter.rank %>
+  </p>
+  <p>
+    <%= f.submit 'Update Shelter'  %>
+  </p>
+<% end %>
