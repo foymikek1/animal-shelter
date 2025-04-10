@@ -1,0 +1,23 @@
+
+
+<%= form_for [ @pet ] do |f| %>
+  <p>
+    <%= f.label :age %><br/>
+    <%= f.text_area :age, value: @pet.age %>
+  </p>
+  <p>
+    <%= f.label :breed %><br/>
+    <%= f.text_area :breed, value: @pet.breed %>
+  </p>
+  <p>
+    <%= f.label :name %><br/>
+    <%= f.text_area :name, value: @pet.name %>
+  </p>
+    <p>
+    <%= f.label :adoptable %><br/>
+    <%= f.text_area :adoptable, value: @pet.adoptable %>
+  </p>
+  <p>
+    <%= f.submit 'Update Pet'  %>
+  </p>
+<% end %>
