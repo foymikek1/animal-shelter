@@ -12,13 +12,14 @@ describe "user can create a shelter", type: :feature do
     it "creates a new shelter and is displayed on shelters_path" do
       visit "/shelters"
       click_on "New Shelter"
-      expect(current_path).to eq("shelters/new")
+      
+      expect(current_path).to eq("/shelters/new")
 
-      fill_in "comment[foster_program]", with: true
-      fill_in "comment[rank]", with: 4
-      fill_in "comment[city]", with: "Longmont"
-      fill_in "comment[name]", with: "Longmont Shelter"
-      click_on "Create Shelter"
+      fill_in("Foster program", with: true)
+      fill_in("Rank", with: 4)
+      fill_in("City", with: "Longmont")
+      fill_in("Name", with: "Longmont Shelter")
+      click_on "Submit"
 
       expect(current_path).to eq("/shelters")
       expect(page).to have_content("Longmont Shelter")
