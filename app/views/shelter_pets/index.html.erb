@@ -1,0 +1,11 @@
+<h1>All <%= "#{@shelter.name}"%>'s pets</h1>
+
+<ul id="shelter-pets">
+  <% @shelter.pets.each do |pet| %>
+  <l1><b><%= pet.name %></b></l1>
+  <li>Breed: <%= pet.breed %></li>
+  <li>Age: <%= pet.age %></li>
+  <li>Is adoptable: <%= pet.adoptable %></li>
+  <br></br>
+  <% end %>
+</ul>
