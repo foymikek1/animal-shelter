@@ -10,5 +10,7 @@ describe "user sees all shelters", type: :feature do
 
       expect("#{shelter_2.name}").to appear_before("#{shelter_1.name}", only_text: true)
     end
+
+
   end
 end
