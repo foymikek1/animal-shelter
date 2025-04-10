@@ -14,17 +14,16 @@ class SheltersController < ApplicationController
 
   def create
     @shelter = Shelter.new
-    @shelter.update(
-      foster_program: params[:shelter][:foster_program],
-       rank:params[:shelter][:rank],
-        city: params[:shelter][:city],
-         name: params[:shelter][:name]
-        )
+    @shelter.update(shelter_params)
     @shelter.save
     redirect_to("/shelters")
   end
 
   private
+
+  def shelter_params
+    params.require(:shelter).permit(:foster_program, :rank, :city, :name)
+  end
 
   def find_shelter
     @shelter = Shelter.find(params[:id])
