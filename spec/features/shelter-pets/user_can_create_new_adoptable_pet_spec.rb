@@ -15,9 +15,8 @@ describe "user can create an adoptable pet that belongs to a shelter", type: :fe
       
       expect(current_path).to eq("/shelters/#{@shelter_1.id}/pets/new")
 
-      #fill_in("adoptable", with: true)
-      fill_in("age", with: 3)
-      fill_in("breed", with: "Australian Shepard")
+      fill_in("Age", with: 3)
+      fill_in("Breed", with: "Australian Shepard")
       fill_in("Name", with: "Ranger")
       click_on "Create Pet"
 

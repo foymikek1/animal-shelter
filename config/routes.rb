@@ -12,12 +12,13 @@ Rails.application.routes.draw do
   #get "/shelters", to: "shelters#index"
   #get "/shelters/:id", to: "shelters#show"
   #get "/shelters/new", to: "shelters#new"
-resources :shelters
+  resources :shelters
   #pets routes
   get "/pets", to: "pets#index"
   get "/pets/:id", to: "pets#show"
 
   #shelter-pets routes
   get "/shelters/:id/pets", to: "shelter_pets#index"
-  
+  get "/shelters/:id/pets/new", to: "shelter_pets#new"
+  post "shelter/pets", to: "shelter_pets#create"
 end
