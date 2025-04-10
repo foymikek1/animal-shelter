@@ -8,9 +8,14 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "shelters#index"
 
+  #shelters routes
   get "/shelters", to: "shelters#index"
   get "/shelters/:id", to: "shelters#show"
 
+  #pets routes
   get "/pets", to: "pets#index"
   get "/pets/:id", to: "pets#show"
+
+  #shelter-pets routes
+  get "/shelters/:id/pets", to: "shelter_pets#index"
 end
