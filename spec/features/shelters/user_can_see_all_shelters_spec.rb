@@ -10,8 +10,6 @@ describe "user sees all shelters", type: :feature do
   end
   describe "they visit /shelters" do
     it "displays all shelters by most recently created" do
-      
-
       visit "/shelters"
 
       expect("#{@shelter_2.name}").to appear_before("#{@shelter_1.name}", only_text: true)
