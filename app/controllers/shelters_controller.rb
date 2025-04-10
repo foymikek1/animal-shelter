@@ -1,5 +1,5 @@
 class SheltersController < ApplicationController
-  before_action :find_shelter, only: [:show]
+  before_action :find_shelter, only: [:show, :edit, :update]
 
   def index
     @shelters = Shelter.all.reverse
@@ -17,6 +17,14 @@ class SheltersController < ApplicationController
     @shelter.update(shelter_params)
     @shelter.save
     redirect_to("/shelters")
+  end
+
+  def edit
+  end
+
+  def update
+    @shelter.update(shelter_params)
+    redirect_to("/shelters/#{@shelter.id}")
   end
 
   private
